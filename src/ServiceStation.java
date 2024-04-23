@@ -15,6 +15,7 @@ public class ServiceStation {
         truck.serve();
         for (int i = 0; i < truck.getWheelCount(); i++) {
             truck.updateTyre();
+
         }
         truck.checkEngine();
         truck.checkTrailer();

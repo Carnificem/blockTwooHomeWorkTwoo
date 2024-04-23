@@ -37,7 +37,8 @@ public class Transport implements Info {
         System.out.println("Проверяем прицеп у " + getModelName());
 
     }
-    public void serve(){
+
+    public void serve() {
         System.out.println("Обслуживаем " + getModelName());
     }
 }
