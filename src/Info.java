@@ -1,12 +1,8 @@
 public interface Info {
-
-    public void checkEngine();
-
-
-    public void checkTrailer();
-
-
-    public void updateTyre();
+    public String getModelName();
+    public void setModelName(String modelName);
+    public int getWheelCount();
+    public void setWheelCount(int wheelCount);
 }
 
 

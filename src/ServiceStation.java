@@ -1,11 +1,7 @@
-public class ServiceStation extends Transport {
-
-    public ServiceStation(String modelName, int wheelCount) {
-        super(modelName, wheelCount);
-    }
+public class ServiceStation {
 
     public ServiceStation() {
-        super();
+
     }
 
     public void check(Transport transport) {

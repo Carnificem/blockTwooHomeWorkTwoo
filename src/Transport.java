@@ -8,10 +8,6 @@ public abstract class Transport implements Info {
         this.wheelCount = wheelCount;
     }
 
-    public Transport() {
-
-    }
-
     public String getModelName() {
         return modelName;
     }
@@ -27,20 +23,16 @@ public abstract class Transport implements Info {
     public void setWheelCount(int wheelCount) {
         this.wheelCount = wheelCount;
     }
-@Override
+
     public void checkEngine() {
         System.out.println("Проверяем двигатель у " + getModelName());
     }
 
-public void serve(){
-    System.out.println("Обслуживаем "+getModelName());
-}
-@Override
     public void checkTrailer() {
         System.out.println("Проверяем прицеп у " + getModelName());
 
     }
-@Override
+
     public void updateTyre() {
         System.out.println("Меняем покрышку у " + getModelName());
 
