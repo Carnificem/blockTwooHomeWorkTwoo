@@ -1,25 +1,26 @@
-public class ServiceStation {
-    public void check(Car car) {
-        car.serve();
-        for (int i = 0; i < car.getWheelCount(); i++)
-            car.updateTyre();
-        car.checkEngine();
-    }
-    public void check(Bicycle bicycle) {
-        bicycle.serve();
-        for (int i = 0; i < bicycle.getWheelCount(); i++) {
-            bicycle.updateTyre();
-        }
-    }
-    public void check(Truck truck) {
-        truck.serve();
-        for (int i = 0; i < truck.getWheelCount(); i++) {
-            truck.updateTyre();
+public class ServiceStation extends Transport {
 
+    public ServiceStation(String modelName, int wheelCount) {
+        super(modelName, wheelCount);
+    }
+
+    public ServiceStation() {
+        super();
+    }
+
+    public void check(Transport transport) {
+        if (transport != null) {
+            System.out.println("Обслуживаем " + transport.getModelName());
+            for (int i = 0; i < transport.getWheelCount(); i++) {
+                transport.updateTyre();
+            }
+            if (transport instanceof Car) {
+                transport.checkEngine();
+            }
+            if (transport instanceof Truck) {
+                transport.checkEngine();
+                transport.checkTrailer();
+            }
         }
-        truck.checkEngine();
-        truck.checkTrailer();
     }
 }
-
-
